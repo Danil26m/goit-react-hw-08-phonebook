@@ -1,33 +1,16 @@
-import Form from './Form/Form';
-import Contacts from './Contacts/Contacts';
-import { useSelector } from 'react-redux';
-export default function App() {
-  const contacts = useSelector(state => state.contacts.items);
-  const filter = useSelector(state => state.filter);
-  const filtered = () => {
-    if (filter) {
-      return contacts.filter(m =>
-        m.name.toLowerCase().includes(filter.toLocaleLowerCase())
-      );
-    }
-    return contacts;
-  };
-  const f = filtered();
-  return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        alignItems: 'center',
-        color: '#010101',
-      }}
-    >
-      <h1>Phonebook</h1>
-      <Form items={contacts} />
+import { Link, Route, Routes } from "react-router-dom";
+import AppContacts from "./AppContact";
+import Register from "./Register/Register";
 
-      <h2>Contacts</h2>
-      {contacts?.length ? <Contacts cont={f} /> : ''}
-    </div>
-  );
+export default function App() {
+    
+    return <> 
+    <Link to='/register'>register</Link>
+    <Routes>
+        <Route path="/" element={<div>Home</div>}/>
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/contacts" element={<AppContacts/>}/>
+    </Routes>
+    </>
+   
 }
