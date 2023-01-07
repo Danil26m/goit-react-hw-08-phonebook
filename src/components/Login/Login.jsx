@@ -12,7 +12,13 @@ export default function Login() {
           even.target.reset();
   }
     return (
-      <div>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        color: '#010101',
+      }}>
         <form id='form' action="" onSubmit={handelSubmit}>
         
           <h2>Email</h2>

@@ -1,0 +1,12 @@
+.user{
+    display: flex;
+    align-items: center;
+}
+.text-auth{
+    color: rgb(46, 199, 181);
+}
+.button{
+    margin-left: 10px;
+    background-color: rgb(42, 165, 130);
+    height: 20px;
+}

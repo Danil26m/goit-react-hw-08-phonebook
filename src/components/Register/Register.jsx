@@ -15,7 +15,13 @@ export default function Register() {
           even.target.reset();
   }
     return (
-      <div>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        color: '#010101',
+      }}>
         <form id='form' action="" onSubmit={handelSubmit}>
         
           <h2>Name</h2>
