@@ -49,7 +49,6 @@ const logout = createAsyncThunk(
         }
     }
 );
-
 const current = createAsyncThunk(
     'auth/current',
     async(_, thunkAPI)=>{
