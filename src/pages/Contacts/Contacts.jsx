@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch} from 'react-redux';
-import { deleteComponent} from 'redux/options';
-import { addTar} from 'redux/filter';
+import { deleteComponent} from 'redux/options/options';
+import { addTar} from 'redux/filter/filter';
 export default function Contacts({cont}) {
     const dispatch = useDispatch();
   return (

@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useDispatch} from 'react-redux';
-import { addContacts, fetchTasks } from 'redux/options';
+import { addContacts, fetchTasks } from 'redux/options/options';
 export default function Form({items}) {
   const dispatch = useDispatch();
-    useEffect(()=>{ dispatch(fetchTasks()) },[dispatch]);
+    useEffect(()=>{ 
+     return()=> dispatch(fetchTasks()) ;
+  },[dispatch]);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const handelInput = even => {

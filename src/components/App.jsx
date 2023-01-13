@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import authOperations from 'redux/auth/auth-operations';
 import AppContacts from './AppContact';
-import Login from './Login/Login';
-import Register from './Register/Register';
-import Private from './UserMenu/Private';
-import Public from './UserMenu/Public';
+import Login from '../pages/Login/Login';
+import Register from '../pages/Register/Register';
+import Private from './Private/Private';
+import Public from './Public/Public';
 import UserMenu from './UserMenu/UserMenu';
 
 export default function App() {
@@ -63,6 +63,7 @@ export default function App() {
                 </Public>
             
             } />
+            <Route path='*' element={<Navigate to={loged?'/contacts':'/login'} />}/>
       </Routes>
     </>
   );

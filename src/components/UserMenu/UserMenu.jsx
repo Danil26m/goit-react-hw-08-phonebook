@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import authOperations from "redux/auth/auth-operations";
 import './User.css';
 
-export default function UserMenu(prop) {
+export default function UserMenu() {
     const auth = useSelector(state => state.auth.user.name);
     const dispatch = useDispatch();
     const handleClick = ()=>{

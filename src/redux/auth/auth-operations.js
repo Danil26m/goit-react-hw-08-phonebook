@@ -4,7 +4,6 @@ axios.defaults.baseURL = "https://connections-api.herokuapp.com";
 
 const token ={
     set(token){
-        console.log(token);
         axios.defaults.headers.common.Authorization = `Bearer ${token}`;
     },
     unset(){
