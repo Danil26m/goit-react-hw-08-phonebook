@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
-import authOperations from 'redux/auth/auth-operations';
 import AppContacts from './AppContact';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
@@ -10,11 +8,7 @@ import Public from './Public/Public';
 import UserMenu from './UserMenu/UserMenu';
 
 export default function App() {
-  const dispatch = useDispatch();
   const loged = useSelector(state => state.auth.token);
-  useEffect(() => {
-    dispatch(authOperations.current());
-  }, [dispatch]);
   return (
     <>
     <header>
