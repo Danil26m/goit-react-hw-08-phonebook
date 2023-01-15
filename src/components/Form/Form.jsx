@@ -4,7 +4,7 @@ import { addContacts, fetchTasks } from 'redux/options/options';
 export default function Form({items}) {
   const dispatch = useDispatch();
     useEffect(()=>{ 
-     return()=> dispatch(fetchTasks()) ;
+     return()=> dispatch(fetchTasks());
   },[dispatch]);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
